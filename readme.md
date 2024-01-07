@@ -1,6 +1,25 @@
 # Transfer Learning: Deep Learning Final Project 2023 | Universiy of Oulu
 Authors: Mitun Kanti Paul, Akash Sinha Bappy, Tanvir Shuvo
 
+## Transfer learning-based image classification
+
+**Motivation:** In some application domains, we cannot get a large amount of data, which makes it difficult or even impossible to train the deep learning models from scratch. One common approach to address this problem is transfer learning. Researchers attempt to address this problem with transfer learning.
+
+* Understand what is transfer learning, and why transfer learning can help to address this problem. 
+* **Goal:** Improve the performance in remote sensing application with small dataset via transfer learning.
+
+
+# Table of Contents
+
+- [Transfer Learning: Deep Learning Final Project 2023 | Universiy of Oulu](#transfer-learning-deep-learning-final-project-2023--universiy-of-oulu)
+  - [Transfer learning-based image classification](#transfer-learning-based-image-classification)
+- [Table of Contents](#table-of-contents)
+  - [Project Structure](#project-structure)
+  - [Overview](#overview)
+  - [Installation](#installation)
+  - [License](#license)
+
+
 ## Project Structure
 
 - [database](database): Database-related files. 
@@ -49,30 +68,33 @@ Authors: Mitun Kanti Paul, Akash Sinha Bappy, Tanvir Shuvo
 
 
 
-## Documentation Structure
 
-- [Project Documentation](#project-documentation)
-  - [Folder Structure](#folder-structure)
-  - [Documentation Structure](#documentation-structure)
-  - [Overview](#overview)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
-  - [License](#license)
 
 ## Overview
 
-Provide a brief overview of your project, its purpose, and goals.
+This project centers on applying transfer learning to enhance the efficacy of deep learning models for remote sensing applications, specifically addressing challenges posed by limited datasets. The primary datasets utilized are [Mini-ImageNet](https://lyy.mpi-inf.mpg.de/mtl/download/), a subset designed for few-shot learning, and [EuroSat-RGB](https://github.com/phelber/EuroSAT), a benchmark dataset for land use classification. The **ResNet-50** architecture is chosen as the primary model for Mini-ImageNet training, with preliminary exploration involving **ResNet-18** and **VGG16**. Key steps involve _data preparation_, _preprocessing with augmentation techniques_, _model selection_, _hyperparameter optimization using Optuna_, and _iterative training processes for both Mini-ImageNet and EuroSat_. The project aims to demonstrate the potential of transfer learning in overcoming data scarcity issues in remote sensing, providing valuable insights and outcomes for real-world applications.
 
 ## Installation
 
-Include instructions on how to set up the project, install dependencies, and activate the virtual environment.
+The installation is pretty much straight forward. all of the dependencies are included in requirement.txt in the root directory. So running the following command in terminal will install all the necessary dependencies. 
 
-## Usage
+```
+pip3 install -r requirement.txt
+```
+while running the traning the dataset will be downloaded from a dropbox link automatically. So no setup necessary for dataset whatsoever. 
 
-Explain how to use your project, including any specific commands or configurations.
+As we used optuna for hypermeter auto optimizations, a range of the parameters can be set in the `run_tuning_miniimagenet.py` and `run_tuning_eurosat.py`. All the input variables are written in capital cases to find them easily. 
+
+To train the model with a specific hyperparametere configaration, the variable values can be set in  `train_miniImagenet.py` and `training_EuroSAT.py`
+
+to run any script, navigate to the root directory and run like the following manner. 
+```
+python run_tuning_miniimagenet.py
+```
+the code structure is in modular form so the funnctions and classes which are reused in multiple scripts are written separatelty and kept in **src** folder. 
+
 
 
 ## License
 
-Specify the project's license information.
+This project is licensed under the [MIT License](./LICENSE).
