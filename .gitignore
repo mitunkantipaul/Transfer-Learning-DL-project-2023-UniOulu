@@ -162,9 +162,9 @@ cython_debug/
 
 # datasets
 datasets/
-plots/
-models/
-logs/
-database/
+# plots/
+# models/
+# logs/
+# database/
 
 
