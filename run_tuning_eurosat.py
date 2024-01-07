@@ -8,7 +8,7 @@ from src.download_dataset import download_dataset
 from src.data_loader import load_data
 from src.models import get_model, get_optimizer
 from src.train import train, eval
-from src.hyperparameter_tuning import objective, my_callback
+from src.hyp_tune_miniimagenet import objective, my_callback
 from src.configs import EURO_SAT_URL, EURO_SAT_DIR, EURO_SAT_100_DIR, DATASETS
 from src.utils import shuffle_and_split, selct_images_from_classes
 from src.configs import ROOT, EURO_SAT_100_DIR, EURO_SAT_100_PRO_DIR

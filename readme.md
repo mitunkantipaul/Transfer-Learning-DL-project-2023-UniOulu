@@ -1,6 +1,7 @@
-# Project Documentation
+# Transfer Learning: Deep Learning Final Project 2023 | Universiy of Oulu
+Authors: Mitun Kanti Paul, Akash Sinha Bappy, Tanvir Shuvo
 
-## Folder Structure
+## Project Structure
 
 - [database](database): Database-related files. 
 
@@ -20,7 +21,6 @@
       - [val](datasets/EuroSAT_PR/val): Validation subset.
       - [test](datasets/EuroSAT_PR/test): Test subset.
         
-
 - [logs](logs): Log files of hyper-parameter tuning.
 
 - [models](models): Model files in **_.pth_** format
@@ -30,25 +30,24 @@
   - [Pretrained](plots/Pretrained): Plots for pretrained models.
 
 - [src](src): Source code files.
-  - [configs.py](src/configs.py): Plots for pretrained models.
-  - [utils.py](src/utils.py): Plots for pretrained models.
-  - [download_dataset.py](src/download_dataset.py): Plots for pretrained models.
-  - [data_loader.py](src/data_loader.py): Plots for pretrained models.
-  - [models.py](src/models.py): Plots for pretrained models.
-  - [logger.py](src/logger.py): Plots for pretrained models.
-  - [train.py](src/train.py): Plots for pretrained models.
-  - [hyp_tune_miniimagenet.py](src/hyp_tune_miniimagenet.py): Plots for pretrained models.
-  - [hyp_tune_eurosat.py](src/hyp_tune_eurosat.py): Plots for pretrained models.
-  
-src\data_loader.py
-src\download_dataset.py
-src\hyp_tune_eurosat.py
-src\hyp_tune_miniimagenet.py
-src\logger.py
-src\models.py
-src\train.py
-C:\DL\deep learning project\src\transforms.py
-src\utils.py
+  - [configs.py](src/configs.py): cofigurations of project.
+  - [utils.py](src/utils.py): Utility functions.
+  - [download_dataset.py](src/download_dataset.py): Data download functions.
+  - [data_loader.py](src/data_loader.py): Dataloader functions.
+  - [models.py](src/models.py): Models definition.
+  - [logger.py](src/logger.py): Defining logger.
+  - [train.py](src/train.py): train and evaluation functions.
+  - [hyp_tune_miniimagenet.py](src/hyp_tune_miniimagenet.py): Objective function Definintion for Mini-ImageNet.
+  - [hyp_tune_eurosat.py](src/hyp_tune_eurosat.py): Objective function Definintion for EuroSAT.
+
+- [run_tuning_miniimagenet.py](run_tuning_miniimagenet.py): Run hyper-parameter tuning on Mini-ImageNet.
+- [run_tuning_eurosat.py](run_tuning_eurosat.py): Run hyper-parameter tuning on EuroSAT.
+- [train_miniImagenet.py](train_miniImagenet.py): Run trainig and testing on Mini-ImageNet.
+- [training_EuroSAT.py](training_EuroSAT.py): Run trainig and testing on EuroSAT.
+- [requirements.txt](requirements.txt): pip install requirements.txt.
+- [readme.md](readme.md): ReadMe file.
+
+
 
 ## Documentation Structure
 
@@ -73,9 +72,6 @@ Include instructions on how to set up the project, install dependencies, and act
 
 Explain how to use your project, including any specific commands or configurations.
 
-## Contributing
-
-Describe how others can contribute to your project, guidelines for submitting issues or pull requests.
 
 ## License
 
